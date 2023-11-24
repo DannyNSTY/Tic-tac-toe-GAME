@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 import Player from './components/Player.jsx';
 import GameBoard from './components/GameBoard.jsx';
