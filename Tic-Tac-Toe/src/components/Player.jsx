@@ -32,14 +32,17 @@ export default function Player({
     // btnCaption = 'Save';
   }
 
+
   return (
-    <motion.li whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}
+    <motion.li whileHover={{ scale: 1.2, 
+      boxShadow: "0px 20px 10px 0px rgba(0,0,0,0.3)" }} 
     className={isActive ? 'active' : undefined}>
       <span className="player">
         {editablePlayerName}
         <span className="player-symbol">{symbol}</span>
       </span>
-      <button onClick={handleEditClick}>{isEditing ? 'Save' : 'Edit'}</button>
+      <motion.button whileTap={{ scale: 0.8 }}
+      onClick={handleEditClick}>{isEditing ? 'Save' : 'Edit'}</motion.button>
     </motion.li>
   );
 }
