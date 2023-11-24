@@ -20,8 +20,8 @@ html {
 body {
   background: radial-gradient(
       circle at top,
-      rgba(241, 210, 70, 0.98),
-      rgba(250, 176, 103, 0.87)
+      #ffb703,
+      #fb8500
     ),
     url('bg-pattern-dark.png');
   background-repeat: repeat;
@@ -52,9 +52,10 @@ h1 {
   margin: 3rem auto;
   padding: 2rem;
   border-radius: 6px;
-  background: linear-gradient(#383624, #282617);
+  background: linear-gradient(#6fe7e1, #09aed3);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative;
+  box-shadow: 0px 49px 10px 0px rgba(0,0,0,0.3);
 }
 
 #players {
@@ -72,12 +73,14 @@ h1 {
   align-items: center;
   width: 50%;
   border: 2px solid transparent;
-  background-color: #7def75;
+  background-color: #023047;
+  border-radius: 5px;
 }
 
 #players.highlight-player li.active {
   border-color: #f6e35a;
   animation: pulse 2s infinite ease-in-out;
+  
 }
 
 #players.highlight-player li.active .player-name,
@@ -88,8 +91,9 @@ h1 {
 #players button {
   width: 3rem;
   border: none;
-  background: none;
-  color: #c3ba78;
+  background-color: #fb8500;
+  border-radius: 10%;
+  color: #023047;
   font-size: 0.9rem;
   cursor: pointer;
   transition: color 0.2s;
@@ -128,7 +132,7 @@ h1 {
   border: none;
   padding: 0.5rem;
   animation: pulse-text 2s infinite;
-  background-color: #46432f;
+  background-color: #219ebc;
   text-align: center;
   text-transform: uppercase;
 }
@@ -183,12 +187,15 @@ ol {
   width: 8rem;
   height: 8rem;
   border: none;
-  background: #aca788;
-  color: #3f3b00;
+  background: #219ebc;
+  color: #fb8500;
+  text-shadow: 0px 2px 10px black;
   font-size: 5rem;
   cursor: pointer;
   font-family: 'Caprasimo', cursive;
   padding: 1rem;
+  border-radius: 10px;
+  box-shadow: inset 0px 49px 17px 0px rgba(0,0,0,0.2);
 }
 
 #game-over {
@@ -324,29 +331,14 @@ ol {
 @keyframes pulse {
   0% {
     border-color: #f6e35a;
-    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0.4);
+    box-shadow: 0px 30px 10px 0px rgba(0,0,0,0.3);
   }
   50% {
     border-color: #f8c031;
-    box-shadow: 0 0 0 0.5rem rgba(248, 165, 49, 0);
+    box-shadow: 0px 20px 10px 0px rgba(0,0,0,0.3);
   }
   100% {
     border-color: #f6e35a;
-    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0);
-  }
-}
-
-/* Fancy animation for showing the "Game Over" element */
-@keyframes pop-in {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  80% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
+    box-shadow: 0px 30px 10px 0px rgba(0,0,0,0.3);
   }
 }
